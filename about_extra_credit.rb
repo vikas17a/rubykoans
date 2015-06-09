@@ -78,13 +78,15 @@ class Game
 
   def final_round
     @player = @player1
+    @turn = 1
     2.times do
       @player.dice_reset(5)
       @round = 0
-      puts "Player 1 is playing with #{@player.no_dice}"
+      puts "Player #{@turn} is playing with #{@player.no_dice}"
       dice = DiceSet.roll(@player.no_dice)
       @player.calculateScore(dice, @round)
       @player = @player2
+      @turn = 2
     end
     if @player1.score > @player2.score
       puts "Player 1 wins"
