@@ -65,6 +65,7 @@ class Game
         @turn = 2
       else
         @turn = 1
+      end
       @round = 0
     end
     final_round
