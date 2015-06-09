@@ -16,6 +16,7 @@ class Game
   attr_reader :round
   attr_reader :last_score
   attr_reader :prev_nonscore
+  
 
   def initialize
     @turn = 1
@@ -25,6 +26,7 @@ class Game
     @player2 = Player.new
     @player = player1
     @prev_nonscore = -1
+
   end
 
   def play
@@ -94,7 +96,7 @@ end
 class Player
   attr_accessor :score
   attr_reader :no_dice
-  attr_reader :open
+  attr_accessor :open
   attr_reader :round_score
   attr_reader :score_dice
   def initialize
