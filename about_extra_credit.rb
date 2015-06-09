@@ -60,7 +60,11 @@ class Game
         @player.open = false
       end
       @player.dice_reset(5)
-      @player = @player2
+      if @player == @player1
+        @player = @player2
+      else
+        @player = @player1
+      end
       if @turn == 1
         @turn = 2
       else
