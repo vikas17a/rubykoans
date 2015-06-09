@@ -67,6 +67,7 @@ class Game
         @turn = 1
       end
       @round = 0
+      @prev_nonscore = -1
     end
     final_round
   end
