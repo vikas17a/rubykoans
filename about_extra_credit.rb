@@ -61,7 +61,10 @@ class Game
       end
       @player.dice_reset(5)
       @player = @player2
-      @turn = 2
+      if @turn == 1
+        @turn = 2
+      else
+        @turn = 1
       @round = 0
     end
     final_round
