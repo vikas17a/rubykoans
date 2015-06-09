@@ -53,6 +53,7 @@ class Game
           @player.score = 0
         end
       end
+      @player.reset_score
       @last_score = @player.score
       if @player.score < 300 && @player.open
         @player.score = 0
@@ -118,7 +119,6 @@ class Player
   end
   def calculateScore(dice, round)
     @round_score = 0
-    @score_dice = 0
     occurence = Hash.new(0)
     dice.map {|i| occurence[i] += 1}
     for i in (1..6)
@@ -152,6 +152,9 @@ class Player
   end
   def dice_reset(no)
     @no_dice = no
+  end
+  def reset_score
+    @score_dice = 0
   end
 end
 
