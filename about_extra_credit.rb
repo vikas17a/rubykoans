@@ -79,7 +79,7 @@ class Game
   def final_round
     @player = @player1
     2.times do
-      @player.dice_reset = 5
+      @player.dice_reset(5)
       @round = 0
       puts "Player 1 is playing with #{@player.no_dice}"
       dice = DiceSet.roll(@player.no_dice)
@@ -94,7 +94,7 @@ class Game
   end
 
   def play_more(score)
-    if score >= 3000
+    if score >= 400
       return false
     else
       return true
