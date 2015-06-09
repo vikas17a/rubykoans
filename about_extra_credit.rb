@@ -97,7 +97,7 @@ class Game
   end
 
   def play_more(score)
-    if score >= 400
+    if score >= 3000
       return false
     else
       return true
