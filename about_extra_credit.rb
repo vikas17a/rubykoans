@@ -38,7 +38,7 @@ class Game
       @round += 1
       puts "Player #{@turn} has scored #{@player.score}"
       @last_score = @player.score
-      if (@player.no_dice > 0 || @player.score_dice  == @player.no_dice) && (@prev_nonscore != @player.no_dice || @prev_nonscore == 0)
+      if (@player.no_dice > 0 || @player.score_dice  == 5) && (@prev_nonscore != @player.no_dice || @prev_nonscore == 0)
         @prev_nonscore = @player.no_dice
         puts "Player has #{@player.no_dice} non score dice"
         puts "Do you want to continue to roll ? {Y/N}"
